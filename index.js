@@ -3,7 +3,7 @@ const express = require("express")
     // a function that creates instance of
     // the express applications.
 
-const morgan = require("morgan")
+const logger = require("morgan")
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
@@ -26,7 +26,10 @@ app.use(cookieParser());
 
 
 
+app.get("/", (req, res) => {
+    res.render("homepage");
 
+});
 
 
 
